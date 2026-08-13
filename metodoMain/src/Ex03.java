@@ -5,9 +5,17 @@ import java.util.Scanner;
 //números que vem após esse número
 //(O parâmetro do método deve ser o número inserido pelo usuário)
 public class Ex03 {
+    public static void  imprimirNumeros(int numero){
+        for(int i=0; i<20;i++){
+            numero = numero+1;
+        }
+    }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int vetor[];
+        System.out.println("Informe um número: ");
+         int numero = input.nextInt();
 
     }
+
+
 }
