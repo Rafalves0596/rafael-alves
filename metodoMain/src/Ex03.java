@@ -7,13 +7,15 @@ import java.util.Scanner;
 public class Ex03 {
     public static void  imprimirNumeros(int numero){
         for(int i=0; i<20;i++){
-            numero = numero+1;
+            System.out.println(numero+i);
         }
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Informe um número: ");
          int numero = input.nextInt();
+
+         imprimirNumeros(numero);
 
     }
 
