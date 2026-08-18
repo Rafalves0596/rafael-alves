@@ -8,6 +8,7 @@ public class Ex04 {
     public static void main(String[] args) {
         int[] vetor = {3,5,-4,7,-8,1};
         System.out.println("O maior elemento é: ");
+        maiorElemento(vetor);
         System.out.println("O menor elemento é: ");
         System.out.println("A média dos elementos é: ");
 

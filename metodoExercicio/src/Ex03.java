@@ -6,8 +6,8 @@ import java.util.Scanner;
 //(O parâmetro do método deve ser o número inserido pelo usuário)
 public class Ex03 {
     public static void  imprimirNumeros(int numero){
-        for(int i=0; i<20;i++){
-            System.out.println(numero+i);
+        for(int i=numero; i<=numero+20;i++){
+            System.out.println(i);
         }
     }
     public static void main(String[] args) {
