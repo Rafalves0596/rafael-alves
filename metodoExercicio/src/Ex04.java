@@ -6,11 +6,11 @@
 //(Criar um método para cada questão)
 public class Ex04 {
     public static void main(String[] args) {
-        int[] vetor = {3,5,-4,7,-8,1};
-        System.out.println("O maior elemento é: ");
+        int[] vetor = {1,2,3,4,5,6};
         maiorElemento(vetor);
-        System.out.println("O menor elemento é: ");
-        System.out.println("A média dos elementos é: ");
+        menorElemento(vetor);
+        mediaElemento(vetor);
+
 
     }
     public static void maiorElemento(int[] vetor){
@@ -21,6 +21,7 @@ public class Ex04 {
 
             }
         }
+        System.out.println("O maior valor é: "+maior);
     }
     public static void menorElemento(int[] vetor){
         int menor=vetor[0];
@@ -29,13 +30,15 @@ public class Ex04 {
                 menor=vetor[j];
             }
         }
+        System.out.println("O menor valor é: "+menor);
 
     }
     public static void mediaElemento(int[] vetor){
-        int soma=0;
+        double soma=0;
         for(int k=0; k<6; k++){
             soma = vetor[k]+soma;
         }
-        int media = soma/6;
+        double media = soma/6;
+        System.out.println("a média é: "+media);
     }
 }
