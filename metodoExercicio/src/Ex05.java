@@ -17,8 +17,8 @@ public class Ex05 {
         comparaValores(valorBase,valor1,valor2);
     }
     public static void comparaValores(int valorBase, int valor1, int valor2){
-        int comparacao = valorBase - valor1;
-        int comparacao2 = valorBase - valor2;
+        int comparacao = valor1 - valorBase;
+        int comparacao2 = valor2 - valorBase;
 
         if(comparacao>comparacao2){
             System.out.println(valor1+" está mais próximdo do valor base.");
