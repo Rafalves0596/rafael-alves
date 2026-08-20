@@ -1,29 +1,38 @@
 import java.util.Scanner;
 
 public class Ex07 {
-    public static int estacoesDoAno(int verao, int outono, int primavera, int inverno){
-        Scanner input = new Scanner(System.in);
+    public static String imprimirVerao(){
 
-        System.out.println("Insira um número de 1 a 4: ");
-        int numero = input.nextInt();
 
-        if(numero == 1){
-            System.out.println("É verão, o tempo está quente.");
+    return "E está calor.";
+    }
+    public static String imprimirOutono(){
 
-        } else if(numero == 2){
-            System.out.println("É Outono, as folhas caem.");
+    return "E as folhas caem.";
+    }
+    public static  String imprimirPrimavera(){
 
-        } else if(numero == 3){
-            System.out.println("É primavera, as flores estão florescendo.");
+    return "E as flores florescem.";
+    }
+    public static String  imprimirInverno(){
 
-        } else if(numero == 4){
-            System.out.println("É inverno, o tempo esta frio.");
-        }
-
-        return numero;
+    return "E esta frio.";
     }
 
     public static void main(String[] args) {
-        System.out.println(estacoesDoAno(1,2,3,4));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe a estação do ano: ");
+        int estacao = input.nextInt();
+
+        if(estacao == 1 ){
+            System.out.println("É verão, "+ imprimirVerao());
+        } else if(estacao == 2){
+            System.out.println("É Outono, "+imprimirOutono());
+        } else if(estacao == 3){
+            System.out.println("É Primavera, "+imprimirPrimavera());
+        } else if(estacao == 4){
+            System.out.println("É Inverno, "+imprimirInverno());
+        }
+
     }
 }
