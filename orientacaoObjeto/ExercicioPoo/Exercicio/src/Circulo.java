@@ -6,5 +6,5 @@ Para obter o valor de PI, use a função Math.PI do Java
  */
 
 public class Circulo {
-    
+    double raio;
 }
