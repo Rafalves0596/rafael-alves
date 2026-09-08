@@ -7,4 +7,9 @@ Para obter o valor de PI, use a função Math.PI do Java
 
 public class Circulo {
     double raio;
+
+    public double calcularArea(){
+        return Math.PI*Math.pow(raio,2);
+    }
+
 }

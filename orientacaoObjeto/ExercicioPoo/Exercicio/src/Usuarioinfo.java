@@ -1,4 +1,4 @@
-public class InfoUsuario {
+public class Usuarioinfo {
     public static void main(String[] args) {
         Usuario info = new Usuario();
 
