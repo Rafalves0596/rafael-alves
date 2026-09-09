@@ -33,7 +33,7 @@ public class MercadoObjetos2 {
                 mercadoMaiorReceitaMacas = mercados[i];
             }
         }
-        System.out.println("Maior receita de maças: "+maiorReceitaMacas +" farturou "+mercadoMaiorReceitaMacas);
+        System.out.println("Maior receita de maças: "+maiorReceitaMacas +" do mercado "+mercadoMaiorReceitaMacas.nome);
 
         double menorReceitaLaranjas = Double.MAX_VALUE;
         Mercado2 mercadorMenorReceitaLaranja = null;
@@ -43,5 +43,6 @@ public class MercadoObjetos2 {
                 mercadorMenorReceitaLaranja = mercados[i];
             }
         }
+        System.out.println("Menor receita de laranjas: "+menorReceitaLaranjas +" do mercado "+mercadorMenorReceitaLaranja.nome);
     }
 }
