@@ -18,6 +18,15 @@ public class Mercado2 {
     int macasVendidas;
     double precoMacas;
     int laranjasVendidas;
+
+    public Mercado2(String nome, int macasVendidas, double precoMacas, int laranjasVendidas, double precoLaranjas) {
+        this.nome = nome;
+        this.macasVendidas = macasVendidas;
+        this.precoMacas = precoMacas;
+        this.laranjasVendidas = laranjasVendidas;
+        this.precoLaranjas = precoLaranjas;
+    }
+
     double precoLaranjas;
 
     public double calcularReceitaMaca(){
