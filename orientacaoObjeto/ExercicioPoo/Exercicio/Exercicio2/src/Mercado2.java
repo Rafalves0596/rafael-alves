@@ -19,6 +19,17 @@ public class Mercado2 {
     double precoMacas;
     int laranjasVendidas;
 
+    @Override
+    public String toString() {
+        return "Mercado2{" +
+                "nome='" + nome + '\'' +
+                ", macasVendidas=" + macasVendidas +
+                ", precoMacas=" + precoMacas +
+                ", laranjasVendidas=" + laranjasVendidas +
+                ", precoLaranjas=" + precoLaranjas +
+                '}';
+    }
+
     public Mercado2(String nome, int macasVendidas, double precoMacas, int laranjasVendidas, double precoLaranjas) {
         this.nome = nome;
         this.macasVendidas = macasVendidas;
