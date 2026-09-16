@@ -3,7 +3,12 @@ public class AeronaveClasse {
         Aeronave aviao1 = new Aeronave("boeing_737",230,870,27000,60);
         Aeronave aviao2 = new Aeronave( "airbus_A350",180,832,23000,40);
         Aeronave aviao3 = new Aeronave("embraer_E195",132,870,13000,22);
-        Aeronave aviao4 = new Aeronave("boeing_777",345,950,120000,160);
+        Aeronave aviao4 = new Aeronave("cesna_172",4,230,212,0.56);
+
+        aviao3.setPassageiros(-50);
+        aviao3.setModelo("           ");
+        aviao3.setVel_Max(0);
+        System.out.println("-----------------------");
 
         Aeronave[] aeronaves = {aviao1,aviao2,aviao3,aviao4};
         double maiorNumPass = 0;

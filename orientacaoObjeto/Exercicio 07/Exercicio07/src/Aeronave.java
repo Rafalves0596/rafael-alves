@@ -19,7 +19,7 @@ public class Aeronave {
    private String modelo;
    private int passageiros;
    private double vel_Max;
-    private double capDoTanque;
+   private double capDoTanque;
    private double queimaPorMinuto;
 
    public String getModelo() {
@@ -27,7 +27,11 @@ public class Aeronave {
    }
 
    public void setModelo(String modelo) {
-      this.modelo = modelo;
+      if(modelo == null ||modelo.isBlank()){
+         System.out.println("Erro, modelo de aeronave inválida.");
+      } else {
+         this.modelo = modelo;
+      }
    }
 
    public int getPassageiros() {
@@ -35,7 +39,11 @@ public class Aeronave {
    }
 
    public void setPassageiros(int passageiros) {
-      this.passageiros = passageiros;
+      if(passageiros<0){
+         System.out.println("Erro qauntidade de passageiros é inválida.");
+      } else {
+         this.passageiros = passageiros;
+      }
    }
 
    public double getVel_Max() {
@@ -43,7 +51,11 @@ public class Aeronave {
    }
 
    public void setVel_Max(double vel_Max) {
-      this.vel_Max = vel_Max;
+      if(vel_Max<=0){
+         System.out.println("Erro, velocidade inválida.");
+      } else {
+         this.vel_Max = vel_Max;
+      }
    }
 
    public double getCapDoTanque() {
@@ -51,7 +63,11 @@ public class Aeronave {
    }
 
    public void setCapDoTanque(double capDoTanque) {
-      this.capDoTanque = capDoTanque;
+      if(capDoTanque<=0){
+         System.out.println("Erro, capacidade de combustível inválida.");
+      } else {
+         this.capDoTanque = capDoTanque;
+      }
    }
 
    public double getQueimaPorMinuto() {
@@ -59,7 +75,11 @@ public class Aeronave {
    }
 
    public void setQueimaPorMinuto(double queimaPorMinuto) {
-      this.queimaPorMinuto = queimaPorMinuto;
+      if(queimaPorMinuto<=0){
+         System.out.println("Erro, queima de combustível inválida.");
+      } else {
+         this.queimaPorMinuto = queimaPorMinuto;
+      }
    }
 
    @Override
@@ -73,12 +93,18 @@ public class Aeronave {
               '}';
    }
 
-   public Aeronave(String modelo, int passageiros, double velocidade_Max, double capacidadeDoTanque, double queimaCombustivel) {
-      this.modelo = modelo;
+   public Aeronave(String modelo, int passageiros, double vel_Max, double capDoTanque, double queimaPorMinuto) {
+      /*this.modelo = modelo;
       this.passageiros = passageiros;
       this.vel_Max = velocidade_Max;
       capDoTanque = capacidadeDoTanque;
       this.queimaPorMinuto = queimaCombustivel;
+       */
+      setModelo(modelo);
+      setPassageiros(passageiros);
+      setVel_Max( vel_Max);
+      setCapDoTanque(capDoTanque);
+      setQueimaPorMinuto(queimaPorMinuto);
    }
    public double calculaTempoNoAr(){
       return capDoTanque/queimaPorMinuto;
