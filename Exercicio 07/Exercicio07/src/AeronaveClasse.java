@@ -9,8 +9,8 @@ public class AeronaveClasse {
         double maiorNumPass = 0;
         Aeronave aviaoMaiorPass = null;
         for(int i=0; i< aeronaves.length; i++){
-            if(aeronaves[i].passageiros>maiorNumPass){
-                maiorNumPass = aeronaves[i].passageiros;
+            if(aeronaves[i].getPassageiros()>maiorNumPass){
+                maiorNumPass = aeronaves[i].getPassageiros();
                 aviaoMaiorPass = aeronaves[i];
             }
         }
