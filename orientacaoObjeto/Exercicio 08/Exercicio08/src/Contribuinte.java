@@ -3,7 +3,7 @@ public class Contribuinte {
     private String cpf;
     private String uf;
     private double rendaAnual;
-    double aliquota;
+
 
     public String getNome(){
         return nome;
@@ -45,23 +45,40 @@ public class Contribuinte {
     }
 
     public void setRendaAnual(double rendaAnual){
+        if(rendaAnual<0){
+            System.out.println("Erro, valor inválido.");
+
+        }
         this.rendaAnual = rendaAnual;
     }
 
-    public double CalculaImposto(){
-        if(rendaAnual>=0 || rendaAnual<=4000){
-            aliquota = 0;
-        } else if(rendaAnual>=4001 || rendaAnual<=9000){
-            aliquota = 0.058;
-        } else if(rendaAnual>=9001 || rendaAnual<=25000){
-            aliquota = 0.15;
-        } else if(rendaAnual>=25001 || rendaAnual<=35000){
-            aliquota = 0.27;
-        } else {
-            aliquota = 0.3;
-        }
+    public Contribuinte(String nome, String cpf, String uf, double rendaAnual) {
+        setNome(nome);
+        setCpf(cpf); ;
+        setUf(uf);
+        setRendaAnual(rendaAnual);
 
-        return rendaAnual*aliquota;
+    }
+    public double calcularImposto(){
+        return rendaAnual*calcularAliquota();
+    }
+
+    public double calcularAliquota(){
+        if(rendaAnual<=4000){
+            return 0;
+
+        } else if(rendaAnual<=9000){
+            return rendaAnual*0.0058;
+
+        } else if(rendaAnual<=25000){
+            return rendaAnual*0.15;
+
+        } else if(rendaAnual<=35000){
+            return rendaAnual*0.275;
+
+        } else {
+            return rendaAnual*0.3;
+        }
     }
 
 }
