@@ -11,7 +11,7 @@ public class Contribuinte {
 
     public void setNome(String nome){
         if(nome == null || nome.isBlank()){
-            System.out.println("Erro, insira um nome.");
+            throw new IllegalArgumentException("Erro, insira um nome.");
         } else {
             this.nome = nome;
         }
@@ -23,7 +23,7 @@ public class Contribuinte {
 
     public void setCpf(String cpf){
         if(cpf == null || cpf.isBlank() || cpf.length()!=11){
-            System.out.println("Erro,CPF inválido.");
+            throw new IllegalArgumentException("Erro,CPF inválido.");
         } else {
         this.cpf = cpf;
         }
@@ -35,7 +35,7 @@ public class Contribuinte {
 
     public void setUf(String uf){
         if(uf == null || uf.isBlank()||uf.length()!=2){
-            System.out.println("Erro, informe sua Unidade Federal.");
+            throw new IllegalArgumentException("Erro, informe sua Unidade Federal.");
         }
         this.uf = uf;
     }
@@ -46,7 +46,7 @@ public class Contribuinte {
 
     public void setRendaAnual(double rendaAnual){
         if(rendaAnual<0){
-            System.out.println("Erro, valor inválido.");
+            throw new IllegalArgumentException("Erro, valor inválido.");
 
         }
         this.rendaAnual = rendaAnual;
