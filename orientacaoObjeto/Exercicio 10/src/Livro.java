@@ -41,7 +41,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "O Livro" + "titulo='" + titulo + '\'' +
+        return "O Livro" + " de titulo = " + titulo + '\'' +
                 ", emprestado=" + emprestado +
                 '}';
     }
