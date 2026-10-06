@@ -14,11 +14,16 @@ public class Solicitanumero {
         numeros.add(9);
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Pergunte um número que pode estar na lista: ");
+        System.out.println("Insira um número ");
         int num = input.nextInt();
 
-        System.out.println(numeros.contains(num));
-        System.out.println(numeros.indexOf(num));
+        int indice = numeros.indexOf(num);
+
+        if(indice != -1) {
+            System.out.println("A posição na lista é: "+ indice);
+        } else {
+            System.out.println("Não está na lista.");
+        }
 
     }
 }
