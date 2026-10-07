@@ -18,6 +18,7 @@ public class Concessionaria {
         for(Veiculo v: veiculos){
             if(v.getPreco() < menorPreco){
                 menorPreco = v.getPreco();
+                veiculoMenorPreco = v;
 
             }
         }

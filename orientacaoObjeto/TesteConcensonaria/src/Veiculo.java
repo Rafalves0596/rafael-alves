@@ -18,6 +18,9 @@ public class Veiculo {
     }
 
     public void setMarca(String marca) {
+        if(marca == null || marca.isBlank()){
+            throw new IllegalArgumentException("Marca Inválida.");
+        }
         this.marca = marca;
     }
 
@@ -51,5 +54,16 @@ public class Veiculo {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", placa='" + placa + '\'' +
+                ", ano=" + ano +
+                ", preco=" + preco +
+                '}';
     }
 }
