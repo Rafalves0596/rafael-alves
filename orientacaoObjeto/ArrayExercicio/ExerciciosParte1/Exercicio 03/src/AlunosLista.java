@@ -25,7 +25,7 @@ public class AlunosLista {
                return a;
            }
        }
-       return null;
+       throw new IllegalArgumentException("Matricula não encontrada.");
     }
 
 }
