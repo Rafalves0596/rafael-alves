@@ -31,7 +31,7 @@ public class Aluno {
 
     public void setIdade(int idade) {
         if(idade < 5){
-            throw new IllegalArgumentException("Idade inválida");
+            throw new IllegalArgumentException("Idade inválida.");
         }
         this.idade = idade;
     }
@@ -72,12 +72,6 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", matricula='" + matricula + '\'' +
-                ", curso='" + curso + '\'' +
-                ", media=" + media +
-                '}';
+        return "Aluno{" + "nome='" + nome +", idade=" + idade + ", matricula='" + matricula + ", curso='" + curso  + ", media=" + media + '}';
     }
 }
