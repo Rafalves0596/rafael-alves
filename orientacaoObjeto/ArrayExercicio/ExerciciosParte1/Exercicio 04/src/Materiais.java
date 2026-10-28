@@ -1,14 +1,14 @@
-public class MateriaisConstrucao {
+public class Materiais {
     private String Marca;
     private String modelo;
     private double preco;
     private int quantidade;
 
-    public MateriaisConstrucao(String marca, String modelo, double preco, int quantidade) {
-        Marca = marca;
-        this.modelo = modelo;
-        this.preco = preco;
-        this.quantidade = quantidade;
+    public Materiais(String marca, String modelo, double preco, int quantidade) {
+       setMarca(marca);
+       setModelo(modelo);
+       setPreco(preco);
+       setQuantidade(quantidade);
     }
 
     public String getMarca() {
@@ -51,6 +51,19 @@ public class MateriaisConstrucao {
         }
         this.quantidade = quantidade;
     }
+    public void adicionarProdutoEstoque(int adicionarEstoque){
+        if(adicionarEstoque <= 0){
+            throw new IllegalArgumentException("Adição inválida.");
+        }
+        quantidade = quantidade + adicionarEstoque;
+    }
+    public void venderProduto(int vender){
+        if (vender > quantidade){
+            throw new IllegalArgumentException("Quantidade de produtos a ser vendida maior que no estoque.");
+        }
+        quantidade = quantidade - vender;
+    }
+
 
     @Override
     public String toString() {
