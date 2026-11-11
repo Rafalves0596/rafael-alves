@@ -21,7 +21,6 @@ public class Conta {
     public double getSaldo() {
         return saldo;
     }
-
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
@@ -48,8 +47,6 @@ public class Conta {
         contaDestino.depositarDinheiro(valorTrans);
     }
 
-
-
     public double simularInvestimento(double valorInvestido, int tempo){
         if(tempo <=0 || valorInvestido<=0){
             throw new IllegalArgumentException("Valor ou tempo investidos inválidos.");
@@ -58,7 +55,6 @@ public class Conta {
 
 
     }
-
     @Override
     public String toString() {
         return "Conta{" +

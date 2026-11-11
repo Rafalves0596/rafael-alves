@@ -14,5 +14,16 @@ public class ContaMain {
         Banco.adicionarConta(c4);
         Banco.adicionarConta(c5);
         Banco.adicionarConta(c6);
+
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println("-------------");
+        c2.transferirDinheiro(450.00,c1);
+
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println("------------");
+
+        System.out.println(c1.simularInvestimento(1450,10));
     }
 }
