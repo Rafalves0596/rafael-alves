@@ -26,8 +26,6 @@ public class desafio {
 
     @Override
     public String toString() {
-        return "desafio{" +
-                "dataNascimento=" + dataNascimento +
-                '}';
+        return "desafio{" + "dataNascimento=" + dataNascimento + '}';
     }
 }
